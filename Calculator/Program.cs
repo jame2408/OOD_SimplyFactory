@@ -6,40 +6,35 @@ namespace Calculator
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("請輸入第一個數字：");
-            double firstNumber = Convert.ToDouble(Console.ReadLine());
-
-            Console.WriteLine("請輸入運算元(+-*/)：");
-            string operate = Console.ReadLine();
-
-            Console.WriteLine("請輸入第二個數字：");
-            double secondNumber = Convert.ToDouble(Console.ReadLine());
-
-            string result = string.Empty;
-            switch (operate)
+            try
             {
-                case "+":
-                    result = (firstNumber + secondNumber).ToString();
-                    break;
-                case "-":
-                    result = (firstNumber - secondNumber).ToString();
-                    break;
-                case "*":
-                    result = (firstNumber * secondNumber).ToString();
-                    break;
-                case "/":
-                    if (secondNumber != 0)
-                    {
-                        result = (firstNumber / secondNumber).ToString();
-                    }
-                    else
-                    {
-                        result = "不能除以0";
-                    }
-                    break;
+                Console.WriteLine("請輸入第一個數字：");
+                double firstNumber = Convert.ToDouble(Console.ReadLine());
+
+                Console.WriteLine("請輸入運算元(+-*/)：");
+                string operate = Console.ReadLine();
+
+                Console.WriteLine("請輸入第二個數字：");
+                double secondNumber = Convert.ToDouble(Console.ReadLine());
+
+                string result = string.Empty;
+                if (operate == "/" && secondNumber == 0d)
+                {
+                    result = "除數不能為0";
+                }
+                else
+                {
+                    result = Convert.ToString(Operation.GetResult(firstNumber, secondNumber, operate));
+                }
+
+                Console.WriteLine("計算結果：" + result);
+            }
+            catch (Exception ex)
+            {
+
+                Console.WriteLine("您的輸入有誤：" + ex.Message);
             }
 
-            Console.WriteLine("計算結果：" + result);
 
         }
     }
