@@ -43,7 +43,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Operation.cs" />
+    <Compile Include="Operation\Operation.cs" />
+    <Compile Include="Operation\OperationAdd.cs" />
+    <Compile Include="Operation\OperationDiv.cs" />
+    <Compile Include="Operation\OperationFactory.cs" />
+    <Compile Include="Operation\OperationMul.cs" />
+    <Compile Include="Operation\OperationSub.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

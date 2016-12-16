@@ -24,7 +24,11 @@ namespace Calculator
                 }
                 else
                 {
-                    result = Convert.ToString(Operation.GetResult(firstNumber, secondNumber, operate));
+                    Operation.Operation oper;
+                    oper = Operation.OperationFactory.createOperation(operate);
+                    oper.firstNumber = firstNumber;
+                    oper.secondNumber = secondNumber;
+                    result = Convert.ToString(oper.GetResult());
                 }
 
                 Console.WriteLine("計算結果：" + result);
