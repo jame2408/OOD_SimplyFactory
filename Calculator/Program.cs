@@ -24,11 +24,7 @@ namespace Calculator
                 }
                 else
                 {
-                    Operation.Operation oper;
-                    oper = Operation.OperationFactory.createOperation(operate);
-                    oper.firstNumber = firstNumber;
-                    oper.secondNumber = secondNumber;
-                    result = Convert.ToString(oper.GetResult());
+                    result = CalculatorResult(operate, firstNumber, secondNumber);
                 }
 
                 Console.WriteLine("計算結果：" + result);
@@ -40,6 +36,14 @@ namespace Calculator
             }
 
 
+        }
+
+        private static string CalculatorResult(string operate, double firstNumber, double secondNumber)
+        {
+            var oper = Operation.OperationFactory.createOperation(operate);
+            oper.firstNumber = firstNumber;
+            oper.secondNumber = secondNumber;
+            return oper.GetResult().ToString();
         }
     }
 }
