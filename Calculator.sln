@@ -5,7 +5,7 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator", "Calculator\Calculator.csproj", "{7442D6B5-B671-4D98-892C-7D724073EE05}"
 EndProject
-Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "SimplyFactory", "SimplyFactory\SimplyFactory.modelproj", "{7C29FEF5-3648-42A7-A881-4B80BBD0938D}"
+Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "CalculatorUML", "SimplyFactory\CalculatorUML.modelproj", "{7C29FEF5-3648-42A7-A881-4B80BBD0938D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
